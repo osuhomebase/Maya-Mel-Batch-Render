@@ -15,7 +15,7 @@ namespace MayaBatch
         public string cameraName { get; set; }
         public string fileDirectory { get; set; }
         public string fileName { get; set; }
-        public string outputFileDirectory { get; set; }
+        public string outputFileDirectory { get; set; } 
         public string outputFilePrefix { get; set; }
         public string outputFormat { get; set; }
 
