@@ -14,7 +14,7 @@ namespace MayaBatchTest
         {
             RenderBatch testBatch = new RenderBatch
             {
-                binDirectory = "C:\\Program Files\\AutoDesk\\Maya2015\\bin",
+                binDirectory = "C:\\Program Files\\AutoDesk\\Maya2016\\bin",
                 startFrame = 100,
                 endFrame = 120,
                 cameraName = "camera1",
@@ -24,7 +24,7 @@ namespace MayaBatchTest
                 fileName = "AA_test01.mb"
 
             };
-
+            Console.WriteLine(testBatch.arguments);
             testBatch.Render();
             Console.ReadLine();
                 

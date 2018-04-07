@@ -18,10 +18,11 @@ namespace MayaBatch
         public string outputFileDirectory { get; set; } 
         public string outputFilePrefix { get; set; }
         public string outputFormat { get; set; }
+        public string arguments { get; set; }
 
         public bool Render()
         {
-            string arguments = String.Format(" -s {0} -e {1} -cam {2} -r mr -rd \"{3}\" -im \"{4}\" \"{5}\\{6}\"", this.startFrame, this.endFrame, this.cameraName, this.outputFileDirectory, this.outputFilePrefix, this.fileDirectory, this.fileName);
+            this.arguments = String.Format(" -s {0} -e {1} -cam {2} -r sw -rd \"{3}\" -im \"{4}\" \"{5}\\{6}\"", this.startFrame, this.endFrame, this.cameraName, this.outputFileDirectory, this.outputFilePrefix, this.fileDirectory, this.fileName);
             string executable = String.Format("{0}\\render", this.binDirectory);
 
             Console.Write(executable);
